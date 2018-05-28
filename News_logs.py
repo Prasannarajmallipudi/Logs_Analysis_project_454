@@ -1,7 +1,6 @@
 # !/usr/bin/env python3
 # import the pyscopg2 from postgresql
 import psycopg2
-
 # we connect to the database news to the object Enadu
 Enadu = psycopg2.connect(database="news")
 
@@ -64,7 +63,7 @@ def error_percentage():
     n.execute(query_error_calculation)
     errordata = n.fetchall()
     for d in errordata:
-        date = d[0].strftime('	%B %d, %Y')
+        date = d[0].strftime('    %B %d, %Y')
         errors = str(round(d[1]*100, 1)) + "%" + "  errors"
 # here we need date in the format of month,day and year
         print(date + '__ '+errors)
@@ -75,5 +74,3 @@ if __name__ == '__main__':
     Most_popular_three_articles()
     Most_popular_authors()
     error_percentage()
-
-    
