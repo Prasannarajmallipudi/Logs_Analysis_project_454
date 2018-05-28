@@ -35,7 +35,7 @@ In this project by using a Python program and the psycopg2 module to connect to 
 
 * Unzip the data to folder location.
 
-* From terminal go to location cd /vagrant.
+* From terminal go to directory cd /vagrant.
 
 * psql -d news -f newsdata.sql .
 
